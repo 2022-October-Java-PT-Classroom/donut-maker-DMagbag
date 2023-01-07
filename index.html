@@ -4,10 +4,105 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="./donut-maker-app.js"></script>
+    <link rel="stylesheet" href="resources/css/style.css" />
     <title>Donut Clicker</title>
   </head>
   <body>
-    <div class="container"></div>
-    <script src="./index.js"></script>
+    <div class="container">
+      <header class="header">
+        <h1 id="header-title">Donut Clicker</h1>
+        <nav class="header-nav">
+          <ul class="header-nav--list">
+            <li class="header-nav--listitem">
+              <details id="about">
+                <summary id="about-label">About Fred the Baker</summary>
+                <p id="about-info">
+                  Fred is the owner of Fred the Baker Baking Company. He retired
+                  from making real donuts. His passion for donuts is being kept
+                  alive by making virtual donuts. Fred wants donuts being made
+                  24/7 and wants your help to make them. You can create a donut
+                  by clicking the donut that is displayed below. Fred wants
+                  donuts being made 24/7. To help out, you can buy auto clickers
+                  so that you don't have to manually click the donut button all
+                  day and night. Fred wants A LOT of donuts. Help speed up donut
+                  production by buying donut multipliers. Have fun making
+                  donuts!!
+                </p>
+              </details>
+              <!-- POP UP WINDOW
+                <a
+                href="about"
+                target="popup"
+                onclick="window.open('about', 'popup', 'width=600,height=600,scrollbars=no,resizable=no'); return false;"
+                >Fred the Baker Baking Company
+              </a> -->
+              <!-- ALERT WINDOW
+                <a
+                class="about"
+                onclick="alert('a bunch of text about Fred');return false;"
+                >Fred the Baker Baking Company</a
+              > -->
+              <!-- <select name="about" id="about-text">
+                <option value="">About Fred the Baker</option>
+              </select> -->
+            </li>
+            <li class="header-nav--listitem">
+              <details id="inspiration">
+                <summary id="inspiration-label">Cookie Clicker</summary>
+                <p id="inspiration-info">
+                  This game was inspired by the game,
+                  <a
+                    id="cookie-clicker-link"
+                    href="https://orteil.dashnet.org/cookieclicker"
+                    >Cookie Clicker.</a
+                  >
+                </p>
+              </details>
+            </li>
+            <li class="header-nav--listitem">
+              <details id="contact">
+                <summary id="contact-label">Contact Me</summary>
+                <p id="contact-info">E-mail: Donna.Magbag@gmail.com</p>
+              </details>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div id="donut-clicker--container">
+          <h2 id="donut-clicker--heading">Let's make donuts...</h2>
+          <h3 id="donut-total">Total donuts:</h3>
+          <h4 id="click-value">Click Value:</h4>
+          <div class="image-container">
+            <p id="instructions">CLICK ME</p>
+            <img
+              id="donut-to-click"
+              src="resources/images/donut-to-click.png"
+              alt="donut-to-click"
+              width="200px"
+            />
+          </div>
+        </div>
+        <div id="store-container">
+          <div id="auto-clickers--container">
+            <h2 id="auto-clicker--heading">Auto Clickers</h2>
+            <button id="buy-auto-clicker--button">Buy auto clicker</button>
+            <h3 id="num-auto-clickers">Number of Auto Clickers</h3>
+          </div>
+          <div id="click-multipliers--container">
+            <h2 id="click-multiplier--heading">Click Multipliers</h2>
+            <button id="buy-multiplier--button">Buy multiplier</button>
+            <h3 id="num-multipliers">Number of Click Multipliers</h3>
+          </div>
+        </div>
+        <div id="reset-container">
+          <button id="reset-button">RESET</button>
+        </div>
+      </main>
+      <footer id="footer">
+        <small id="footer-copyright">© Donna Magbag 2023</small>
+      </footer>
+    </div>
   </body>
 </html>

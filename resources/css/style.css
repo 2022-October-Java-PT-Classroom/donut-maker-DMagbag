@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato");
+@import url("https://fonts.googleapis.com/css2?family=Poppins");
+
+* {
+  box-sizing: border-box;
+  width: 100%;
+  font-family: "Poppins", "Lato", Arial, sans-serif;
+  margin: 0;
+  padding: 5px;
+}
+
+html {
+  color: #fefcfd;
+  font: 16px/1.5 sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  background-color: #11001c;
+  max-width: 100vw;
+}
+
+.header {
+  background-color: red;
+}
+
+#header-title {
+  color: #ee2677;
+  background-color: #3b3355;
+  font-size: 6rem;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-around;
+}
+
+.header-nav {
+  background-color: #5d5d81;
+  color: #e87ea1;
+  font-size: 1.1rem;
+}
+
+.header-nav--list {
+  display: flex;
+}
+
+.header-nav--listitem {
+  list-style-type: none;
+}
+
+#about-label {
+  border: 4mm ridge green;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+}
+
+#about-label:hover {
+  background-color: #49111c;
+  border: 4mm ridge green;
+  border-radius: 3px;
+  padding: 3px;
+  transition: 0.5s;
+}
+
+#about-info {
+  background-color: grey;
+  border: thick double black;
+  color: #11001c;
+  font-size: 1rem;
+}
+
+#inspiration-label {
+  border: 4mm ridge green;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+}
+
+#inspiration-label:hover {
+  background-color: #49111c;
+  border: 4mm ridge green;
+  border-radius: 3px;
+  padding: 3px;
+  transition: 0.5s;
+}
+
+#inspiration-info {
+  background-color: grey;
+  border: thick double black;
+  color: #11001c;
+  font-size: 1rem;
+}
+
+#cookie-clicker-link {
+  color: #ee2677;
+}
+
+#contact-label {
+  border: 4mm ridge green;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+}
+
+#contact-label:hover {
+  background-color: #49111c;
+  border: 4mm ridge green;
+  border-radius: 3px;
+  padding: 3px;
+  transition: 0.5s;
+}
+
+#contact-info {
+  background-color: grey;
+  border: thick double black;
+  color: #11001c;
+  font-size: 1rem;
+}
+
+#donut-clicker--container {
+  border: 5px solid #5e503f; /*delete?*/
+}
+
+#donut-clicker--heading {
+  color: #a9927d;
+  border: 1px solid white; /*delete*/
+  text-align: center;
+  font-size: 3rem;
+}
+
+.image-container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+#instructions {
+  color: black;
+  font-size: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#donut-to-click {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: auto;
+}
+
+#auto-clickers--container {
+  color: black;
+  background-color: #afcb10;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+#auto-clicker--heading {
+  text-align: center;
+}
+
+#buy-auto-clicker--button {
+  background-color: #072008;
+  border: 5px solid black;
+  border-radius: 8px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#click-multipliers--container {
+  color: black;
+  background-color: #afcb10;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+#click-multiplier--heading {
+  text-align: center;
+}
+
+#buy-multiplier--button {
+  background-color: #072008;
+  border: 5px solid black;
+  border-radius: 8px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#reset-button {
+  background-color: grey;
+  border: 5px solid black;
+  color: black;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  margin: auto;
+  transition-duration: 0.5s;
+}
+
+#reset-button:hover {
+  background-color: #ee2677;
+  color: white;
+}
+
+@media only screen and (max-width: 767px) {
+  .header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .header-nav--list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+  }
+
+  #footer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #footer-copyright {
+    margin: 0;
+  }
+}
