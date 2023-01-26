@@ -104,6 +104,22 @@ describe('DonutMaker object', ()=> {
     //     expect(underTest.donutCount).toEqual(3);
     // })
 
+
+    test("Does calcManClickValue return 3 for 6 multipliers?", () => {
+        const underTest = new DonutMaker(200, 0, 0, 0, 6, 0, 0);
+        underTest.calcManClickValue();
+        expect(underTest.clickValue).toEqual(3);
+  
+    })
+
+    test("Does donutMultCounter increase the donutCount by 2.1 per click with 3 multipliers?", () => {
+        const underTest = new DonutMaker(200, 0, 0, 0, 3, 0, 2);
+        underTest.donutMultCounter();
+        expect(underTest.donutCount).toEqual(202)
+    })
+
+
+
     // test("Does activateAutoClickers increase the donutCount by the amount of Auto Clickers owned?", () => {
     //     const underTest = new DonutMaker(100, 20, 0);
     //     underTest.activateAutoClickers();

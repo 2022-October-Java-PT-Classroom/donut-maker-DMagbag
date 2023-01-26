@@ -17,6 +17,9 @@ class DonutMaker{
     getDonutCount() {
         return this.donutCount;
     }
+    getClickValue() {
+        return this.clickValue;
+    }
 
     autoClickerCounter() {      
         this.autoClickerCount++;
@@ -26,28 +29,29 @@ class DonutMaker{
         return this.autoClickerCount;
     }
 
-    // calcAutoClickerCost(autoClickerCount) {
-    //     let autoClickerCost = Math.round(100 * (Math.pow(1.1, this.autoClickerCount)));
-    //     return autoClickerCost;
-    // }
+    calcAutoClickerCost() {
+        this.autoClickerCost = Math.round(100 * (Math.pow(1.1, this.autoClickerCount)));
+        return this.autoClickerCost;
+    }
 
     buyAutoClicker() {      
         let autoClickerCost = Math.round(100 * (Math.pow(1.1, this.autoClickerCount)));
         if (this.donutCount >= autoClickerCost) {
             this.donutCount -= autoClickerCost;
             this.autoClickerCounter();
+            this.calcAutoClickerCost;
         }}
 
   // applies multipliers to determine donuts per auto click; this gives donuts per second
-    calcAutoClickValue(autoClickerCount, multiplierCount) {
-        let autoClickValue = Math.round(this.autoClickerCount * Math.pow(1.2, this.multiplierCount));
-        return autoClickValue;
+    calcAutoClickValue() {
+        this.autoClickValue = Math.round(this.autoClickerCount * Math.pow(1.2, this.multiplierCount));
+        return this.autoClickValue;
     }
 
     // activates the auto clickers, add autoClickValue to donut count, use set interval to update every second
-    activateAutoClickers(){
-        this.calcAutoClickValue(autoClickerCount, multiplierCount);
-        this.donutCount += autoClickValue;
+    activateAutoClickers() {
+        this.calcAutoClickValue();
+        this.donutCount += this.autoClickValue;
     }
 
     getMultiplierCount() {
@@ -58,23 +62,28 @@ class DonutMaker{
         this.multiplierCount++;
     }
 
-    // calcMultiplierCost(multiplierCount) {
-    //     let multiplierCost = Math.round(10 * (Math.pow(1.1, this.multiplierCount)));
-    //     return multiplierCost;
-    // }
+    calcMultiplierCost() {
+        this.multiplierCost = Math.round(10 * (Math.pow(1.1, this.multiplierCount)));
+        return this.multiplierCost;
+    }
 
     buyMultiplier() {      
         let multiplierCost = Math.round(10 * (Math.pow(1.1, this.multiplierCount)));
         if (this.donutCount >= multiplierCost) {
             this.donutCount -= multiplierCost;
             this.multiplierCounter();
+            this.calcMultiplierCost();
         }
     }
 
     //applies multipliers to manual clicks, returns the value of each click applying multipliers
-    calcManualClickValue(multiplierCount) {
-        let clickValue = Math.round(Math.pow(1.2, this.multiplierCount));
-        return clickValue;
+    calcManClickValue() {
+        this.clickValue = Math.round(Math.pow(1.2, this.multiplierCount));
+        return this.clickValue;
+    }
+
+    donutMultCounter() {
+        this.donutCount += this.clickValue;
     }
 
     resetGame() {
